@@ -5,10 +5,9 @@ library(RPostgreSQL)
 library(RMySQL)
 library(tidyverse)
 
-# Select appropriate working directory (There has to be a way to automate this!!)
+# Select appropriate working directory
 setwd("~path/tropical-data-analysis")
-#setwd("C:/Users/krenneker/Box Sync/R_WD/R_WD_TD")
-#setwd("C:/Users/abakhtiari/Box Sync/R_WD/R_WD_TD")
+
 
 ##Change this to match "name" in projects table in public schema
 ######MANUALLY CHANGE TO MATCH NAME OF POP FILE
