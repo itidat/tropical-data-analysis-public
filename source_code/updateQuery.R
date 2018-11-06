@@ -74,5 +74,5 @@ for (i in 1:nlevels(as.factor(analysis_insert$eu))) {
 }
 
 
-write.csv(updateQuery, paste("Box Sync/R_WD/R_WD_TD/td_results/offline_results/update_queries/", nameProject, "_updateQuery_",currentDate,".csv",sep=""))
+write.csv(updateQuery, paste("offline_results/update_queries/", nameProject, "_updateQuery_",currentDate,".csv",sep=""))
  
