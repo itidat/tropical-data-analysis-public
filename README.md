@@ -2,11 +2,11 @@ With the aim of supporting our collaborative relationships with health ministrie
 
 We hope you find this repository useful and we encourage you to send comments and/or questions to our support email address at support@tropicaldata.org. 
 
-### 1) Get started by downloading this code repository as a ZIP folder by using the green download button above
+## 1) Get started by downloading this code repository as a ZIP folder by using the green download button above
 
 Once downloaded, you will extract the zipped contents to a folder on your PC. Please take note of this folder path - you will need it to set your working directory in line 17 of the main file (TD_standard_analyses_PUBLIC.R). 
 
-### 2) Download your District to EU crosswalk and your MOH full approved dataset
+## 2) Download your District to EU crosswalk and your MOH full approved dataset
 
 https://www.tropicaldata.org/downloads
 
@@ -17,7 +17,7 @@ See screenshot below for correct download links. There are also demo_eu_cross.cs
 
 ![Tropical Data Downloads module](/images/GitHub_Downloads_screenshot.png)
 
-### 3) Prepare your project-specific population file derived from publicly-available census data
+## 3) Prepare your project-specific population file derived from publicly-available census data
 
 You can submit a request for an already-prepared file by sending an email to our support email address at support@tropicaldata.org. There is a demo_population.csv file included above - this file is only to present the basic table structure and should NOT be used for analyses.
 
@@ -25,7 +25,7 @@ You can submit a request for an already-prepared file by sending an email to our
 
 ![Tropical Data Downloads module](/images/GitHub_WD_screenshot.png)
 
-### 4) Run an analysis 
+## 4) Run an analysis 
 
 You will open the main file (TD_standard_analyses_PUBLIC.R) and make the necessary changes in the "MANUAL CHANGES" section, as outlined below: 
 
