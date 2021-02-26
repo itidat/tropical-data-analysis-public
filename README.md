@@ -44,5 +44,7 @@ Once the analysis has finished running, the results will be exported to your WD.
 ![Tropical Data Downloads module](/images/GitHub_Templates_screenshot.png)
 
 > Note: this analysis code was written to allow you to analyse EUs that used the original GTMP/Tropical Data methodology (v1) and EUs that used the 2019 updated Tropical Data methodology (v2).    
-> Note: this analysis code is fit for use for standard Tropical Data surveys. If your surveys included additional questions/options for operational research and/or programmatic decision making, this code will need to be adapted before use.    
+
+> Note: this analysis code is fit for use for standard Tropical Data surveys. If your surveys included additional questions/options for operational research and/or programmatic decision making, this code will need to be adapted before use. 
+   
 > Note: this analysis code includes bootstrapping to calculate confidence intervals. A higher number of EUs and/or a higher number of trachoma cases will result in a longer running time for the various bootstrap source code files. You will see a STOP SIGN in your RStudio console while these source code files are running. Histograms for each measure and each EU will appear in the "Plots" tab. 
