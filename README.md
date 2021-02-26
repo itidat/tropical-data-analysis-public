@@ -39,7 +39,7 @@ Line 31: reference the name of the MOH full approved dataset file saved in your 
 
 ## 5) After making the changes outlined above, run the entire script
 
-Once the analysis has finished running, the results will be exported to your WD. These results can be used with the District Report template available for download [here](https://www.tropicaldata.org/downloads). See screenshot below for correct download links. 
+Once the analysis has finished running, the results will be exported to your WD. These results can be used with the District Report template available for download here: https://www.tropicaldata.org/downloads. See screenshot below for correct download links. 
 
 ![Tropical Data Downloads module](/images/GitHub_Templates_screenshot.png)
 
