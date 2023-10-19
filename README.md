@@ -36,7 +36,7 @@
 
 ![Tropical Data Downloads module](/images/GitHub_Templates_screenshot.png)
 
-##### NOTE: this analysis code was written to allow you to analyse EUs that used the original GTMP/Tropical Data methodology (v1) and EUs that used the 2019 updated Tropical Data methodology (v2).    
+##### NOTE: this analysis code was written to allow you to analyse EUs that used the original GTMP/Tropical Data methodology (v1), EUs that used the 2019 updated Tropical Data methodology (v2), and EUs that used the 2023 updated Tropical Data methodology (v3).  
 
 ##### NOTE: this analysis code is fit for use for standard Tropical Data surveys. If your surveys included additional questions/options for operational research and/or programmatic decision making, this code will need to be adapted before use.    
 
