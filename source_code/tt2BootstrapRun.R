@@ -1,5 +1,5 @@
-## Tropical Data standard analyses - Bootstrapping EU mean and 95% CI based on adjusted TT v2 cluster prevalence
-## v2 methodology: TT is upper lid trichiasis
+## Tropical Data standard analyses - Bootstrapping EU mean and 95% CI based on adjusted TT v2/v3 cluster prevalence
+## v2/v3 methodology: TT is upper lid trichiasis
 
 ## TT
 ttprev_cluster2 <- ttprev_cluster
