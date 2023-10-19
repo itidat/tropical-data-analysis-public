@@ -8,7 +8,7 @@ clean_hh <- subset(clean, !duplicated(clean[c("eu", "instance_id_house")]))
 count_unique <- function(x){length(which(!is.na(unique(x))))}
 
 # generate WASH counts for each EU (see lines 28-31 for variable definitions)  
-# w2_get_drink_minutes is only included in clean tables that have used v2 methodology - the ifelse handles this exception
+# w2_get_drink_minutes is only included in clean tables that have used v2/v3 methodology - the ifelse handles this exception
 if("w2_get_drink_minutes" %in% colnames(clean_hh)) {
   wash <- clean_hh %>%   
     group_by(eu) %>% 
@@ -46,7 +46,7 @@ wash_eu <- wash %>%
 ################ WASH CLASSIFICATION CHANGES ################
 #############################################################
 
-# v1 surveys used the original GTMP/Tropical Data methodology and v2 surveys used the 2019 updated Tropical Data methodology
+# v1 surveys used the original GTMP/Tropical Data methodology; v2 surveys used the 2019 updated Tropical Data methodology; v3 surveys used the 2023 updated Tropical Data methodology
 # w1_drink_agg: water source type 10 - 'Delivered water (water vendor)' counted as unimproved prior to the 2019 methodology update 
 # due to the change described above, if you are analysing v1 EUs, w1_drink_agg might be higher than the final/approved analysis result
 # the magnitude of the difference will depend on the number of households in the EU with that water source type
