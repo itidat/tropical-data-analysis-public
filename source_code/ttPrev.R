@@ -43,7 +43,7 @@ clean <- clean %>%
 clean <- clean %>% 
   left_join(select(eu_cross, eu, survey_type), by = "eu")
 
-# define TT variables for v2 methodology surveys
+# define TT variables for v2/v3 methodology surveys
 if("offered_surgery_left_eye_upper" %in% colnames(clean)) {
 clean <- clean %>% 
   mutate(tt2 = case_when(clean$survey_type >= 10 & (clean$left_eye_upper_tt == 1 | clean$right_eye_upper_tt == 1) ~ 1, TRUE ~ 0),
