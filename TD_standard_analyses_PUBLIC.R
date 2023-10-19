@@ -1,4 +1,4 @@
-## Tropical Data standard analyses - public version - v1/v2 methodology combined 
+## Tropical Data standard analyses - public version - v1/v2/v3 methodology combined 
 ## v. 24/02/21 
 ## Please refer to the README file for instructions on how to use this code 
 
@@ -72,7 +72,7 @@ source("source_code/ttPrev.R")
 # this code will run for both standard and TT-only projects 
 source("source_code/counts.R") 
 
-# calculate confidence intervals (CIs) for TF, Trichiasis and Trichiasis + TS (v1 methodology), TT (v2 methodology) 
+# calculate confidence intervals (CIs) for TF, Trichiasis and Trichiasis + TS (v1 methodology), TT (v2/v3 methodology) 
 # CIs will default to zero for EUs with zero cases
 if(ttOnly == TRUE) {
   tfprev_eu_CIs <- data.frame(eu=numeric(), tf_adj=numeric(), tf_95_low=numeric(), tf_95_upp=numeric(), stringsAsFactors=FALSE) %>% 
@@ -108,7 +108,7 @@ if(length(tt2EU) > 0) {
   source("source_code/tt2BootstrapWrite.R") 
 } else {
   source("source_code/tt2BootstrapWrite.R") 
-  print("No need to calculate TT 95% confidence intervals due to zero TT cases (v2 methodology)")
+  print("No need to calculate TT 95% confidence intervals due to zero TT cases (v2/v3 methodology)")
 }
 
 # run the source code file to merge analysis results and write them to a file in your working directory
