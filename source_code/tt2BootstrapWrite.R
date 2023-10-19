@@ -1,4 +1,4 @@
-## Tropical Data standard analyses - write TT v2 bootstrapping results
+## Tropical Data standard analyses - write TT v2/v3 bootstrapping results
 
 # for zero cases, this will create an empty dataframe 
 if(length(tt2EU) == 0) {
