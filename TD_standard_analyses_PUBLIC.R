@@ -1,34 +1,43 @@
 ## Tropical Data standard analyses - public version - v1/v2/v3 methodology combined 
-## v. 24/02/21 
+## v. 9 September 2025
 ## Please refer to the README file for instructions on how to use this code 
 
-# load and update necessary packages
-library(RPostgreSQL)
-library(RMySQL)
+# Install required packages 
+if (!requireNamespace("rstudioapi", quietly = TRUE)) {
+  install.packages("rstudioapi")}
+
+if (!requireNamespace("tidyverse", quietly = TRUE)) {
+  install.packages("tidyverse")}
+
+# load and update packages
 library(tidyverse)
+library(rstudioapi)
 update.packages("dplyr")
+
+# get the source file location and set this as the working directory 
+current_path <- rstudioapi::getActiveDocumentContext()$path
+setwd(dirname(current_path))
+# alternatively, you can run line 21 after manually replacing ~path with the path to the folder where you saved the contents of the ZIP folder downloaded from GitHub
+#setwd("~path/tropical-data-analysis-public-master")
 
 #####################################################
 ############ BEGINNING OF MANUAL CHANGES ############
 #####################################################
 
-# adjust to match your working directory 
-# replace ~path with the path to the folder where you saved the contents of the ZIP folder downloaded from GitHub
-setwd("~path/tropical-data-analysis-public-master")
-
 # set this object to TRUE if you are analysing TT-only EUs 
 ttOnly  <- FALSE
 
-# change the file name in "" to match the name of the population file in your working directory 
+# Tropical Data creates population files based on publicly available census data; email support@tropicaldata.org if you would like us to share your project's file
+# change the file name in "" to match the name of the population file saved in your working directory 
 population <- read.csv("country_population.csv", stringsAsFactors = FALSE, sep = ",")
 
-# change the file name in "" to match the name of the EU crosswalk file in your working directory 
-# for authorized data downloaders, the EU crosswalk file for your project is downloadable here : https://www.tropicaldata.org/downloads
-eu_cross <- as.data.frame(read.csv("country_eu_cross.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE, fileEncoding = "UTF-8-BOM"))
+# download the 'Aggregated EU crosswalk' under the section 'Clean Individual-level Datasets (all EUs)' in your project's Downloads module *available for users with the data downloader role* 
+# change the file name in "" to match the name of the EU crosswalk file saved in your working directory 
+eu_cross <- as.data.frame(read.csv("country-eu_cross_aggregated.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE, fileEncoding = "UTF-8-BOM"))
 
-# change the file name in "" to match the name of the clean dataset file in your working directory
-# for authorized data downloaders, the 'MOH full approved dataset' for your project is downloadable here : https://www.tropicaldata.org/downloads
-clean <- as.data.frame(read.csv("country_clean.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE, fileEncoding = "UTF-8-BOM"))
+# download the 'Partial clean dataset without PII' under the section 'Clean Individual-level Datasets (only fully approved EUs)' in your project's Downloads module *available for users with the data downloader role* 
+# change the file name in "" to match the name of the clean dataset file saved in your working directory
+clean <- as.data.frame(read.csv("td_country_clean-approved.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE, fileEncoding = "UTF-8-BOM"))
 
 #####################################################
 ############### END OF MANUAL CHANGES ###############
@@ -112,7 +121,7 @@ if(length(tt2EU) > 0) {
 }
 
 # run the source code file to merge analysis results and write them to a file in your working directory
-# the results in the written file can be pasted into the District Report template downloadable here : https://www.tropicaldata.org/downloads
+# please refer to the data dictionary on the Github page for variable descriptions
 source("source_code/writeAnalysisResults.R")
 
 ### END ###
