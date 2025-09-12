@@ -35,7 +35,7 @@ if(length(trich_unmanagedEU) == 0) {
 # merge two tables together and replace zeros with NAs based on methodology version 
 trich_eu_CIs <- bootResult_trich %>% 
   left_join(bootResult_trich_unman, by = "eu") %>% 
-  left_join(select(eu_cross, eu, survey_type), by = "eu") %>% 
+  left_join(select(eu_cross, eu_id, survey_type), by = c("eu" = "eu_id")) %>% 
   mutate(trich_adj = ifelse(survey_type >= 10, NA, trich_adj)) %>% 
   mutate(trich_95_low = ifelse(survey_type >= 10, NA, trich_95_low)) %>% 
   mutate(trich_95_upp = ifelse(survey_type >= 10, NA, trich_95_upp)) %>% 
