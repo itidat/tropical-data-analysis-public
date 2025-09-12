@@ -35,7 +35,7 @@ if(length(tt2_unmanagedEU) == 0) {
 # merge two tables together and replace zeros with NAs based on methodology version 
 tt2_eu_CIs <- bootResult_tt2 %>% 
   left_join(bootResult_tt2_unman, by = "eu") %>% 
-  left_join(select(eu_cross, eu, survey_type), by = "eu") %>% 
+  left_join(select(eu_cross, eu_id, survey_type), by = c("eu" = "eu_id")) %>% 
   mutate(tt2_adj = ifelse(survey_type < 10, NA, tt2_adj)) %>% 
   mutate(tt2_95_low = ifelse(survey_type < 10, NA, tt2_95_low)) %>% 
   mutate(tt2_95_upp = ifelse(survey_type < 10, NA, tt2_95_upp)) %>% 
