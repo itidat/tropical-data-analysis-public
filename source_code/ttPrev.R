@@ -1,5 +1,5 @@
 ## Tropical Data standard analyses - TT prevalence calculation 
-## v. 22/02/21 
+## v. 26 August 2025 
 
 #step 1: set-up 
 
@@ -41,7 +41,7 @@ clean <- clean %>%
 
 #step 2: create and define variables for TT cases based on methodology version  
 clean <- clean %>% 
-  left_join(select(eu_cross, eu, survey_type), by = "eu")
+  left_join(select(eu_cross, eu_id, survey_type), by = c("eu" = "eu_id"))
 
 # define TT variables for v2/v3 methodology surveys
 if("offered_surgery_left_eye_upper" %in% colnames(clean)) {
@@ -145,7 +145,7 @@ ttprev_cluster <- ttprev2 %>%
             tt1_unmanaged    = sum(tt1_unmanaged), 
             tt2              = sum(tt2),
             tt2_unmanaged    = sum(tt2_unmanaged)) %>% 
-  left_join(select(eu_cross, eu, survey_type), by = "eu") %>% 
+  left_join(select(eu_cross, eu_id, survey_type), by = c("eu" = "eu_id")) %>% 
   mutate(trich = ifelse(survey_type >= 10, NA, trich)) %>% 
   mutate(trich_unmanaged = ifelse(survey_type >= 10, NA, trich_unmanaged)) %>% 
   mutate(tt1 = ifelse(survey_type >= 10, NA, tt1)) %>% 
