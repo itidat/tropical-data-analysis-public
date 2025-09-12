@@ -30,14 +30,14 @@
 
 ######      Line 40: reference the name of the "Partial clean dataset" file saved in your WD
 
-###### NOTE: check that your R utils package is at least version 4.5.1 in your package library. If not, please update your R version and the utils package before running this code.
+######      Note: check that your R utils package is at least version 4.5.1 in your package library. If not, please update your R version and the utils package before running this code.
 
 ##### 5) After making the changes outlined above, run the entire script. 
 
-##### NOTE: this analysis code includes bootstrapping to calculate confidence intervals. A higher number of EUs and/or a higher number of trachoma cases will result in a longer running time for the various bootstrap source code files. You will see a STOP SIGN in your RStudio console while these source code files are running. Histograms for each measure and each EU will appear in the "Plots" tab.
+######      Note: this analysis code includes bootstrapping to calculate confidence intervals. A higher number of EUs and/or a higher number of trachoma cases will result in a longer running time for the various bootstrap source code files. You will see a STOP SIGN in your RStudio console while these source code files are running. Histograms for each measure and each EU will appear in the "Plots" tab.
 
 ##### 6) Once the analysis has finished running, the results will be exported to your working directory (WD) with the file name analysis_results_COUNTRY_DATE.csv. Please use the data_dictionary_analysis.xlsx file included above for definitions of the variables in the results output. 
 
-##### NOTE: this analysis code was written to allow you to analyse EUs that used the original Tropical Data methodology (v1), EUs that used the 2019 updated Tropical Data methodology (v2), and EUs that used the 2023 updated Tropical Data methodology (v3).  
+######      Note: this analysis code was written to allow you to analyse EUs that used the original Tropical Data methodology (v1), EUs that used the 2019 updated Tropical Data methodology (v2), and EUs that used the 2023 updated Tropical Data methodology (v3).  
 
-##### NOTE: this analysis code is fit for use for standard Tropical Data surveys. If your surveys included additional questions/options for operational research and/or programmatic decision making, this code will need to be adapted before use.    
+######      Note: this analysis code is fit for use for standard Tropical Data surveys. If your surveys included additional questions/options for operational research and/or programmatic decision making, this code will need to be adapted before use.    
